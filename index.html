@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EE404İNFXZZ</title>
+  <title>EE404INFXXZ</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(120deg, #0f0f0f, #1a1a1a, #0d1b2a);
+      background: linear-gradient(120deg, #0d0d0d, #111827, #000814);
       color: white;
       overflow: hidden;
     }
 
-    /* Sol üst logo */
+    /* Top-left logo */
     .logo {
       position: fixed;
       top: 15px;
       left: 15px;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
       background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: glow 2s infinite linear;
+      animation: glow 2s linear infinite;
     }
 
     @keyframes glow {
@@ -31,7 +31,7 @@
       100% { filter: hue-rotate(360deg); }
     }
 
-    /* Ortadaki hoş geldin */
+    /* Center content */
     .center {
       height: 100vh;
       display: flex;
@@ -42,7 +42,7 @@
     }
 
     .center h1 {
-      font-size: 50px;
+      font-size: 55px;
       background: linear-gradient(90deg, cyan, magenta, yellow);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -55,11 +55,11 @@
     }
 
     @keyframes float {
-      0%,100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
     }
 
-    /* Alt yazı */
+    /* Footer */
     .footer {
       position: fixed;
       bottom: 10px;
@@ -73,21 +73,21 @@
 
 <body>
 
-  <!-- Sol üst yazı -->
+  <!-- Logo -->
   <div class="logo">
-    EE404İNFXZZ • SYSTEM ONLINE
+    EE404INFXXZ • SYSTEM ONLINE
   </div>
 
-  <!-- Ana içerik -->
+  <!-- Main content -->
   <div class="center">
-    <h1>Hoş Geldiniz</h1>
-    <p>Bu site EE404İNFXZZ tarafından oluşturulmuştur</p>
-    <p>⚡ Sistem aktif • bağlantı stabil • giriş başarılı</p>
+    <h1>WELCOME</h1>
+    <p>System initialized successfully</p>
+    <p>Connection stable • Access granted • Running smooth</p>
   </div>
 
-  <!-- Alt -->
+  <!-- Footer -->
   <div class="footer">
-    © 2026 EE404İNFXZZ | All systems running
+    © 2026 EE404INFXXZ | All systems operational
   </div>
 
 </body>
