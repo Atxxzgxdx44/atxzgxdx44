@@ -1,94 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>EE404INFXXZ</title>
+    <meta charset="UTF-8">
+    <title>EE404İNFXZZ - KONTROL PANELİ</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(120deg, #0d0d0d, #111827, #000814);
-      color: white;
-      overflow: hidden;
-    }
+        /* Sol Üst Logo */
+        .logo {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 3s infinite linear;
+        }
 
-    /* Top-left logo */
-    .logo {
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 20px;
-      font-weight: bold;
-      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 2s linear infinite;
-    }
+        /* Fotoğraf Alanı */
+        .profile-container {
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
 
-    @keyframes glow {
-      0% { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
-    }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #00f2fe;
+            box-shadow: 0 0 20px #00f2fe, 0 0 40px rgba(0, 242, 254, 0.3);
+            object-fit: cover;
+            margin-bottom: 20px;
+            transition: 0.5s;
+        }
 
-    /* Center content */
-    .center {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #ff00de, 0 0 50px rgba(255, 0, 222, 0.4);
+            border-color: #ff00de;
+        }
 
-    .center h1 {
-      font-size: 55px;
-      background: linear-gradient(90deg, cyan, magenta, yellow);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: float 3s ease-in-out infinite;
-    }
+        /* Yazılar */
+        h1 {
+            font-size: 40px;
+            margin: 10px 0;
+            background: linear-gradient(to right, #00f2fe, #ff00de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
 
-    .center p {
-      font-size: 18px;
-      opacity: 0.8;
-    }
+        .status {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #00ff00;
+            margin-bottom: 30px;
+        }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
+        .info-text {
+            font-size: 12px;
+            opacity: 0.7;
+            line-height: 1.8;
+        }
 
-    /* Footer */
-    .footer {
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-      font-size: 12px;
-      opacity: 0.5;
-    }
-  </style>
+        @keyframes glow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-
 <body>
 
-  <!-- Logo -->
-  <div class="logo">
-    EE404INFXXZ • SYSTEM ONLINE
-  </div>
+    <div class="logo">EE404İNFXZZ • SİSTEM ÇEVRİMİÇİ</div>
 
-  <!-- Main content -->
-  <div class="center">
-    <h1>WELCOME</h1>
-    <p>System initialized successfully</p>
-    <p>Connection stable • Access granted • Running smooth</p>
-  </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    © 2026 EE404INFXXZ | All systems operational
-  </div>
+    <div class="profile-container">
+        <img src="profil.jpg" alt="Sistem Sahibi" class="profile-img">
+        
+        <h1>HOŞ GELDİN</h1>
+        <div class="status">● Sistem başarıyla başlatıldı</div>
+        
+        <div class="info-text">
+            Bağlantı stabil • Erişim izni verildi • Sorunsuz çalışıyor<br>
+            © 2026 EE404İNFXZZ | Tüm sistemler aktif durumda
+        </div>
+    </div>
 
 </body>
 </html>
