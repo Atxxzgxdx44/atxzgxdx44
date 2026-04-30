@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel Web Sitem</title>
-    <style>
-        /* CSS: Tasarım ve Renkler */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
-        }
-        h1 { color: #333; }
-        p { color: #666; line-height: 1.6; }
-        button {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        button:hover { background-color: #0056b3; }
-    </style>
+  <meta charset="UTF-8">
+  <title>EE404İNFXZZ</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #0f0f0f, #1a1a1a, #0d1b2a);
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Sol üst logo */
+    .logo {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite linear;
+    }
+
+    @keyframes glow {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    /* Ortadaki hoş geldin */
+    .center {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .center h1 {
+      font-size: 50px;
+      background: linear-gradient(90deg, cyan, magenta, yellow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .center p {
+      font-size: 18px;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Alt yazı */
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Selam, Ben [İsmin]!</h1>
-        <p>Web geliştirme dünyasına ilk adımımı attım. Bu benim ilk web sayfam!</p>
-        <button onclick="mesajVer()">Tıkla Bana!</button>
-    </div>
+  <!-- Sol üst yazı -->
+  <div class="logo">
+    EE404İNFXZZ • SYSTEM ONLINE
+  </div>
 
-    <script>
-        // JavaScript: Etkileşim
-        function mesajVer() {
-            alert("Harika! İlk butonun çalışıyor.");
-        }
-    </script>
+  <!-- Ana içerik -->
+  <div class="center">
+    <h1>Hoş Geldiniz</h1>
+    <p>Bu site EE404İNFXZZ tarafından oluşturulmuştur</p>
+    <p>⚡ Sistem aktif • bağlantı stabil • giriş başarılı</p>
+  </div>
+
+  <!-- Alt -->
+  <div class="footer">
+    © 2026 EE404İNFXZZ | All systems running
+  </div>
 
 </body>
 </html>
