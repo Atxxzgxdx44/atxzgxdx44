@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EE404İNFXZZ | Haber Portalı</title>
     <style>
-        /* Genel Stil Ayarları */
         body {
             background-color: #0a0a0a;
-            color: #00ff41; /* Klasik terminal yeşili */
+            color: #00ff41;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
 
-        /* Üst Menü / Header */
         header {
             border-bottom: 2px solid #00ff41;
             padding: 10px 20px;
@@ -35,7 +33,6 @@
             text-shadow: 0 0 10px #00ff41;
         }
 
-        /* Haber Kaydırma Alanı */
         .container {
             margin-top: 80px;
             padding: 20px;
@@ -44,62 +41,29 @@
             margin-right: auto;
         }
 
-        /* Karşılama Ekranı */
         .welcome-section {
             border: 1px solid #00ff41;
             padding: 20px;
             margin-bottom: 40px;
             background: rgba(0, 255, 65, 0.05);
-            animation: flicker 1.5s infinite;
         }
 
-        /* Haber Kartları */
         .news-card {
             border: 1px solid #333;
             margin-bottom: 50px;
             padding: 15px;
-            transition: 0.3s;
-        }
-
-        .news-card:hover {
-            border-color: #00ff41;
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+            background: #000;
         }
 
         .news-image {
             width: 100%;
             height: auto;
-            max-height: 500px;
-            object-fit: cover;
-            border-bottom: 1px solid #333;
+            display: block;
             margin-bottom: 15px;
-            filter: grayscale(100%) sepia(50%) hue-rotate(100deg);
+            border: 1px solid #00ff41;
         }
 
-        /* Animasyonlar */
-        @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        .typing {
-            overflow: hidden;
-            border-right: .15em solid #00ff41;
-            white-space: nowrap;
-            letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #00ff41; }
-        }
+        h2 { border-left: 5px solid #00ff41; padding-left: 10px; }
 
         footer {
             text-align: center;
@@ -118,19 +82,19 @@
 
     <div class="container">
         <section class="welcome-section">
-            <h1 class="typing">> SİSTEME ERİŞİM SAĞLANDI...</h1>
+            <h1>> SİSTEME ERİŞİM SAĞLANDI...</h1>
             <p>Hoş geldiniz, EE404İNFXZZ Haber Ağına bağlandınız. Veriler çekiliyor...</p>
         </section>
 
         <article class="news-card">
             <h2>[ DOSYA_01: VERİ SIZINTISI ]</h2>
-            <img src="https:foto3jpg./800x450/000/00ff41?text=FOTOGRAF+1+BURAYA" alt="Haber Foto 1" class="news-image">
-            <p>Merkezi veritabanında beklenmedik bir hareketlilik tespit edildi. Tüm birimler teyakkuzda. Kaydırmaya devam edin...</p>
+            <img src="foto3.jpg.jpeg" alt="Haber 1" class="news-image">
+            <p>Merkezi veritabanında beklenmedik bir hareketlilik tespit edildi. Tüm birimler teyakkuzda.</p>
         </article>
 
         <article class="news-card">
             <h2>[ DOSYA_02: SİBER GÜVENLİK ]</h2>
-            <img src="https:foto2.jpg./800x450/000/00ff41?text=FOTOGRAF+2+BURAYA" alt="Haber Foto 2" class="news-image">
+            <img src="foto2.jpg.jpeg" alt="Haber 2" class="news-image">
             <p>Şifreleme protokolleri güncellendi. Yeni dünya düzeninde haber akışı bu kanaldan sağlanacaktır.</p>
         </article>
 
