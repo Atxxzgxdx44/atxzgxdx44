@@ -2,104 +2,141 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>EE404İNFXZZ - KONTROL PANELİ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE404İNFXZZ | Haber Portalı</title>
     <style>
+        /* Genel Stil Ayarları */
         body {
-            margin: 0;
+            background-color: #0a0a0a;
+            color: #00ff41; /* Klasik terminal yeşili */
             font-family: 'Courier New', Courier, monospace;
-            background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
-            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Üst Menü / Header */
+        header {
+            border-bottom: 2px solid #00ff41;
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        /* Sol Üst Logo */
-        .logo {
+            background: rgba(0, 0, 0, 0.9);
             position: fixed;
-            top: 15px;
-            left: 15px;
-            font-size: 20px;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
             font-weight: bold;
-            background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 3s infinite linear;
+            text-shadow: 0 0 10px #00ff41;
         }
 
-        /* Fotoğraf Alanı */
-        .profile-container {
-            text-align: center;
-            animation: fadeIn 2s ease-in;
+        /* Haber Kaydırma Alanı */
+        .container {
+            margin-top: 80px;
+            padding: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #00f2fe;
-            box-shadow: 0 0 20px #00f2fe, 0 0 40px rgba(0, 242, 254, 0.3);
+        /* Karşılama Ekranı */
+        .welcome-section {
+            border: 1px solid #00ff41;
+            padding: 20px;
+            margin-bottom: 40px;
+            background: rgba(0, 255, 65, 0.05);
+            animation: flicker 1.5s infinite;
+        }
+
+        /* Haber Kartları */
+        .news-card {
+            border: 1px solid #333;
+            margin-bottom: 50px;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .news-card:hover {
+            border-color: #00ff41;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
+
+        .news-image {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
             object-fit: cover;
-            margin-bottom: 20px;
-            transition: 0.5s;
+            border-bottom: 1px solid #333;
+            margin-bottom: 15px;
+            filter: grayscale(100%) sepia(50%) hue-rotate(100deg);
         }
 
-        .profile-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px #ff00de, 0 0 50px rgba(255, 0, 222, 0.4);
-            border-color: #ff00de;
+        /* Animasyonlar */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
         }
 
-        /* Yazılar */
-        h1 {
-            font-size: 40px;
-            margin: 10px 0;
-            background: linear-gradient(to right, #00f2fe, #ff00de);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
+        .typing {
+            overflow: hidden;
+            border-right: .15em solid #00ff41;
+            white-space: nowrap;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
 
-        .status {
-            font-size: 14px;
-            letter-spacing: 2px;
-            color: #00ff00;
-            margin-bottom: 30px;
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
         }
 
-        .info-text {
-            font-size: 12px;
-            opacity: 0.7;
-            line-height: 1.8;
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ff41; }
         }
 
-        @keyframes glow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="logo">EE404İNFXZZ • SİSTEM ÇEVRİMİÇİ</div>
+    <header>
+        <div class="logo">EE404İNFXZZ</div>
+        <div style="font-size: 0.8rem;">SİSTEM DURUMU: AKTİF</div>
+    </header>
 
-    <div class="profile-container">
-        <img src="profil.jpg" alt="Sistem Sahibi" class="profile-img">
-        
-        <h1>HOŞ GELDİN</h1>
-        <div class="status">● Sistem başarıyla başlatıldı</div>
-        
-        <div class="info-text">
-            Bağlantı stabil • Erişim izni verildi • Sorunsuz çalışıyor<br>
-            © 2026 EE404İNFXZZ | Tüm sistemler aktif durumda
-        </div>
+    <div class="container">
+        <section class="welcome-section">
+            <h1 class="typing">> SİSTEME ERİŞİM SAĞLANDI...</h1>
+            <p>Hoş geldiniz, EE404İNFXZZ Haber Ağına bağlandınız. Veriler çekiliyor...</p>
+        </section>
+
+        <article class="news-card">
+            <h2>[ DOSYA_01: VERİ SIZINTISI ]</h2>
+            <img src="https://via.placeholder.com/800x450/000/00ff41?text=FOTOGRAF+1+BURAYA" alt="Haber Foto 1" class="news-image">
+            <p>Merkezi veritabanında beklenmedik bir hareketlilik tespit edildi. Tüm birimler teyakkuzda. Kaydırmaya devam edin...</p>
+        </article>
+
+        <article class="news-card">
+            <h2>[ DOSYA_02: SİBER GÜVENLİK ]</h2>
+            <img src="https://via.placeholder.com/800x450/000/00ff41?text=FOTOGRAF+2+BURAYA" alt="Haber Foto 2" class="news-image">
+            <p>Şifreleme protokolleri güncellendi. Yeni dünya düzeninde haber akışı bu kanaldan sağlanacaktır.</p>
+        </article>
+
+        <footer>
+            <p>&copy; 2026 EE404İNFXZZ | Connection Secured</p>
+        </footer>
     </div>
 
 </body>
